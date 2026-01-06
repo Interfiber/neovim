@@ -1,10 +1,16 @@
 return {
-  'ramojus/mellifluous.nvim',
-  config = function ()
-    require("mellifluous").setup({
-      colorset = "alduin"
-    })
+	"zenbones-theme/zenbones.nvim",
+	dependencies = "rktjmp/lush.nvim",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		-- General config
+		vim.o.background = "dark"
 
-    vim.cmd [[ colorscheme mellifluous ]]
-  end
+		vim.g.zenbones = {
+			darkness = "stark",
+		}
+
+		vim.cmd([[ colorscheme zenbones ]])
+	end,
 }

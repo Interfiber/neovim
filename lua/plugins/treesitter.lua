@@ -1,13 +1,13 @@
 return {
-  'nvim-treesitter/nvim-treesitter',
-  lazy = false,
-  build = ':TSUpdate',
-  config = function ()
-    require'nvim-treesitter'.setup {
-      -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
-      install_dir = vim.fn.stdpath('data') .. '/site'
-    }
+	"nvim-treesitter/nvim-treesitter",
+	lazy = false,
+	build = ":TSUpdate",
+	config = function()
+		require("nvim-treesitter").setup({
+			-- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
+			install_dir = vim.fn.stdpath("data") .. "/site",
+		})
 
-    require'nvim-treesitter'.install { 'rust', 'javascript', 'zig', 'c', 'cpp', 'json', 'lua' }
-  end
+		require("nvim-treesitter").install({ "rust", "javascript", "zig", "c", "cpp", "json", "lua", "markdown" })
+	end,
 }
